@@ -18,11 +18,62 @@
  тег : <wbr> атрибути - style;
  На всіх сторінках, які будуть розробляти студенти, необхідно вказувати автора розробки сторінки у тезі <META>
   -->
-  <html>
-    <head>
-        <meta name="Kaptar Artyom">
-    </head>
-    <body>
-
-    </body>
-</html>
+  <!DOCTYPE HTML>
+  <html lang="uk">
+  <head>
+      <meta charset="utf-8">
+      <meta name="author" content="Каптар Артьом Євгенійович">
+      <title>Новини Бібліотеки «Мудрість Століть»</title>
+      
+      <!-- Тег style з атрибутами media та lang -->
+      <style media="all" lang="uk">
+          /* Порожній стиль відповідно до умов (без CSS), але тег присутній з атрибутами */
+      </style>
+  </head>
+  <body>
+      <div class="news-container" id="main-news">
+          <section class="news-section" id="latest-events">
+              <h1>Новини та події бібліотеки</h1>
+  
+              <article>
+                  <h2>Поповнення книгосховища новими примірниками!</h2>
+                  <p>
+                      <span id="date-span" title="Дата публікації">25 Вересня 2026 року</span> — Наша бібліотека отримала понад 500 нових екземплярів сучасного жанру <wbr style="clear: both;">«Фантастика» та «IT-література».
+                  </p>
+                  
+                  <!-- Інтерактивна карта зображення -->
+                  <img src="news-banner.jpg" alt="Банер новин бібліотеки" width="500" border="1" vspace="10" id="news-img" usemap="#newsmap">
+                  <map name="newsmap" coords="0,0,500,200" href="catalog.html" class="interactive-map" tabindex="1">
+                      <area shape="rect" coords="0,0,250,200" href="catalog.html" accesskey="c" tabindex="2" onblur="console.log('blur')" title="Каталог">
+                      <area shape="circle" coords="375,100,50" href="events.html" accesskey="e" tabindex="3" onblur="console.log('blur')" title="Події">
+                  </map>
+  
+                  <p>
+                      Ціна квитка на виставку: <sub><span style="color: green;" id="sub-price">0 грн (Безкоштовно)</span></sub>.
+                  </p>
+                  <p>
+                      Кількість відвідувачів перевищила 10<sup><span lang="uk">3</span></sup> осіб цього місяця!
+                  </p>
+  
+                  <p>
+                      Старий графік роботи <del style="color: red;" cite="http://example.com/reason" class="old-info">до 17:00</del> було скасовано. 
+                      <ins cite="http://example.com/approval" lang="uk" style="color: green;">Тепер ми працюємо до 19:00!</ins>
+                  </p>
+  
+                  <p>
+                      Оригінальна назва східної поезії у нашому фонді: <bdo lang="ar">كتاب</bdo> (<ruby id="ruby-text">書<rt>Книга</rt></ruby>).
+                  </p>
+              </article>
+          </section>
+  
+          <aside style="background-color: #f9f9f9;" class="sidebar-news">
+              <h3>Коротко про головне</h3>
+              <p>Наступного тижня відбудеться зустріч із сучасними українськими авторами.</p>
+          </aside>
+      </div>
+  
+      <footer style="margin-top: 20px; border-top: 1px solid #ccc;">
+          <p>&copy; 2026 Бібліотека «Мудрість Століть». Всі права захищено.</p>
+      </footer>
+  </body>
+  </html>
