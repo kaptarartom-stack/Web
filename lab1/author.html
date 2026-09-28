@@ -1,66 +1,78 @@
-<!--1) Сторінка автора, де я інформую про себе в довільній формі
-_Тег: <h2> атрибути - id title lang , 
-_тег: <h3> атрибути - id title lang ,
-_тег: <h4> атрибути - id title lang ,   
-_тег: <p> атрибути - title aling id ,     
-тег: <br> атрибути - clear style title ,    
-тег: <hr> атрибути - color noshade size ,    
-_тег: <small> атрибути - id title lang ,     
-тег: <strike> атрибути - style title ,         
-тег: <big> атрибути - id title lang.     -->
-     <!DOCTYPE HTML>
-     <html lang="uk">
-     <head>
-         <meta charset="utf-8">
-         <meta name="Author" content="Каптар Артьом Євгенійович">
-         <meta name="Keywords" content="Web - сторiнка, development, HTML reference">
-         <title>Сторінка автора Web-сайту</title>
-     </head>
-     <body bgcolor="#00FFCC">
-         <small id="part-1" title="part" lang="uk">Частина 1</small>
-         <h2 id="hello-text" title="hello" lang="en">Hello guys!</h2>
-         <h3 id="author-perform" title="author" lang="uk">Я є автором даного вебпроєкту</h3>
-         <h4 id="knowledge-text" title="knowledge" lang="uk">Навчаюся на 2 курсі Комп'ютерних наук кафедри МПУіК</h4>
-         
-         <p title="Це представлення першої частини" align="center" id="desc-project">
-             Створення даного проєкту полягає у виконанні лабораторної роботи №1. Сторінка являє собою першу частину.
-         </p>
-         
-         <p lang="uk">&nbsp;&nbsp;&nbsp; На жаль, у даний момент моя домашня сторінка
-             перебуває в стадії розробки, тому ще далеко не всі її розділи доступні для
-             перегляду. Я щиро сподіваюся, що цей ресурс буде постійно обновлятися й у
-             найближчому майбутньому багато хто з перерахованих рубрик займуть своє законне
-             місце.
-             <b>Заходьте на мою сторінку частіше! </b>
-         </p>
-         
-         <p title="Хто я" align="center" id="author-full-name">
-             <u><i>З повагою, Каптар Артьом Євгенійович :D</i></u>
-         </p>
-         
-         <hr color="black" noshade size="3">
-         
-         Про себе.<br clear="all" style="color: blue;" title="about me">
-         Я студент <b>241 групи</b>. Народився в 2007 році.
-         <br clear="none" style="margin-top: 5px;" title="abzatsbr1">Мої родичі.
-         <br>Моя мама - <b>Ява(Java)</b>, мій тато - <b>Перл(Perl)</b>,
-         а дід у мене - <b><i>Сірлюсрлюс(C++)</i></b>.
-         
-         <p>Моя родина плідно працює над розвитком мережі та процвітанням всесвітньої
-         паутини тобто мережі Інтернет(Internet).</p>
-         
-         <hr color="gray" noshade size="2">
-         
-         <p>
-             <strike style="color: red;" title="Стара версія тексту">Стара інформація про автора</strike><br>
-             <big id="big-info" title="Важлива примітка" lang="uk">Основна інформація про розробника сайту</big>
-         </p>
-         
-         Мені задали &lt;tt&gt; з атрибутом title ось приклад його використання:
-         <p>
-             <tt title="Добре, ось бачите ефект застосування цього атрибуту.">наведіть курсор миші на цей текст</tt>
-         </p>
-         
-         <hr color="black" noshade size="1">
-     </body>
-     </html>
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="Author" content="Каптар Артьом Євгенійович">
+    <meta name="Keywords" content="Web - сторiнка, development, HTML reference">
+    <title>Сторінка автора Web-сайту</title>
+    <!-- Підключення каскадних стилів -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Рівень 1 вкладеності: Головний обгортальний контейнер -->
+    <div id="main-news" class="container-wrapper custom-bg">
+        
+        <!-- Рівень 2 вкладеності: Секція шапки та привітання -->
+        <section class="card-box">
+            <small id="part-1" title="part" lang="uk">Сторінка автора</small>
+            <h2 id="hello-text" title="hello" lang="en">Hello guys!</h2>
+            
+            <!-- Рівень 3 вкладеності: Вкладений блок з описом -->
+            <div class="block-element">
+                <h3 id="author-perform" title="author" lang="uk">Я є автором даного вебпроєкту</h3>
+                <h4 id="knowledge-text" title="knowledge" lang="uk">Навчаюся на 2 курсі Комп'ютерних наук кафедри МПУіК</h4>
+            </div>
+        </section>
+
+        <!-- Рівень 2 вкладеності: Основна інформація -->
+        <section class="news-section">
+            <article>
+                <p title="Це представлення першої частини" align="center" id="desc-project">
+                    Створення даного проєкту полягає у виконанні лабораторної роботи №1. Сторінка являє собою першу частину.
+                </p>
+                
+                <p lang="uk">&nbsp;&nbsp;&nbsp; На жаль, у даний момент моя домашня сторінка
+                    перебуває в стадії розробки, тому ще далеко не всі її розділи доступні для
+                    перегляду. Я щиро сподіваюся, що цей ресурс буде постійно обновлятися й у
+                    найближчому майбутньому багато хто з перерахованих рубрик займуть своє законне
+                    місце.
+                    <b>Заходьте на мою сторінку частіше! </b>
+                </p>
+                
+                <p title="Хто я" align="center" id="author-full-name">
+                    <u><i>З повагою, Каптар Артьом Євгенійович :D</i></u>
+                </p>
+            </article>
+
+            <hr color="black" noshade size="3">
+
+            <!-- Рівень 3 вкладеності: Блок з особистими даними -->
+            <div class="scroll-box">
+                <p>Про себе.<br clear="all" style="color: blue;" title="about me">
+                Я студент <b>241 групи</b>. Народився в 2007 році.</p>
+                
+                <p><br clear="none" style="margin-top: 5px;" title="abzatsbr1">Мої хобі<br>
+                Улюблений відпочинок - <b>Прослуховування музики</b>, улюблений спорт - <b>Волейбол</b>,
+                Проживання - <b><i>Гуртожиток</i></b>.</p>
+            </div>
+        </section>
+
+        <!-- Рівень 2 вкладеності: Додаткова інформація -->
+        <aside class="card-box">
+            <hr color="gray" noshade size="2">
+            
+            <div>
+                <strike style="color: red;" title="Стара версія тексту">Стара інформація про автора</strike><br>
+                <big id="big-info" title="Важлива примітка" lang="uk">Основна інформація про розробника сайту</big>
+            </div>
+            
+            <p>
+                <tt title="Добре, ось бачите ефект застосування цього атрибуту.">наведіть курсор миші на цей текст</tt>
+            </p>
+            
+            <hr color="black" noshade size="1">
+        </aside>
+
+    </div>
+</body>
+</html>
