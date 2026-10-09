@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Каптар Артьом Євгенійович">
+    <title>Списки матеріалів та послуг — Бібліотека «Мудра Сова»</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav" style="padding: 10px; background: #eee;">
+        <a href="menu.html" title="Повернутися в меню">← Головне меню</a>
+    </nav>
+
+    <main id="list-page-main">
+        <h1>Каталог та інформаційні списки бібліотеки</h1>
+
+        <!-- 1. МАРКОВАНИЙ СПИСОК (<ul>, <li>) з атрибутами -->
+        <section>
+            <h2>Основні жанри літератури у фонді</h2>
+            <ul title="Перелік доступних жанрів" compact="compact" style="list-style-type: disc;" value="disc">
+                <li id="item-genre-1" title="Художня література" style="font-weight: bold;" type="disc">
+                    Класична та сучасна художня проза
+                </li>
+                <li id="item-genre-2" title="Наука та технічні дисципліни" style="color: darkgreen;" type="circle">
+                    Науково-популярна та ІТ-література
+                </li>
+                <li id="item-genre-3" title="Історичні праці" style="font-style: italic;" type="square">
+                    Історичні хроніки та мемуари
+                </li>
+            </ul>
+        </section>
+
+        <!-- 2. НУМЕРОВАНИЙ СПИСОК (<ol>, <li>) з атрибутами -->
+        <section>
+            <h2>Порядок отримання читацького квитка</h2>
+            <ol title="Кроки для реєстрації" type="1" lang="uk">
+                <li id="step-1" title="Крок перший" style="margin-bottom: 5px;">
+                    Пред'явити документ, що посвідчує особу.
+                </li>
+                <li id="step-2" title="Крок другий" style="margin-bottom: 5px;">
+                    Заповнити анкету читача у відділі обслуговування.
+                </li>
+                <li id="step-3" title="Крок третій" style="margin-bottom: 5px;">
+                    Отримати персональний читацький квиток з QR-кодом.
+                </li>
+            </ol>
+
+            <h3>Рідкісні видання (За абеткою)</h3>
+            <ol type="a" title="Алфавітний список" lang="uk">
+                <li title="Видання А">«Апостол» — Іван Федоров (Репринтне видання)</li>
+                <li title="Видання Б">«Записки українського самашедшого» — Ліна Костенко</li>
+            </ol>
+        </section>
+
+        <!-- 3. СПИСОК ВИЗНАЧЕНЬ (<dl>, <dt>, <dd>) з атрибутами -->
+        <section>
+            <h2>Термінологічний словник бібліотеки</h2>
+            <dl>
+                <!-- <dt> з title та lang -->
+                <dt title="Термін 1" lang="uk"><strong>Книгосховище</strong></dt>
+                <!-- <dd> з title та id -->
+                <dd title="Визначення книгосховища" id="def-storage">
+                    Спеціально обладнане приміщення для довготривалого зберігання друкованих видань та архівних матеріалів.
+                </dd>
+
+                <dt title="Термін 2" lang="uk"><strong>Абонемент</strong></dt>
+                <dd title="Визначення абонемента" id="def-abonement">
+                    Відділ бібліотеки, у якому читачі отримують книги для користування поза бібліотекою на визначений термін.
+                </dd>
+
+                <dt title="Термін 3" lang="uk"><strong>Читальний зал</strong></dt>
+                <dd title="Визначення читального залу" id="def-reading-room">
+                    Окреме приміщення для роботи з виданнями, які не видаються додому (рідкісні книги, енциклопедії, свіжа преса).
+                </dd>
+            </dl>
+        </section>
+    </main>
+</body>
+</html>
