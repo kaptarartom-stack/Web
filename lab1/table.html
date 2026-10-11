@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Каптар Артьом Євгенійович">
+    <title>Інформація у вигляді таблиці</title>
+    <link rel="stylesheet" type="text/css" sizes="any" media="all" href="styles.css">
+</head>
+<body>
+    <table dir="ltr" bgcolor="#ffffff" summary="Облік видачі книг у бібліотеці" frame="box">
+        <caption title="Журнал видачі книг" class="lib-caption">Бібліотека: журнал видачі книг</caption>
+
+        <colgroup lang="uk" span="1"></colgroup>
+        <colgroup lang="uk" span="3"></colgroup>
+        <colgroup lang="uk" span="2"></colgroup>
+        <colgroup lang="uk" span="2"></colgroup>
+
+        <thead>
+            <tr valign="middle" style="background-color:#e8dcc8;" title="Верхній рядок заголовка" lang="uk">
+                <th id="h-num" scope="col" rowspan="2"></th>
+                <th id="h-edition" scope="colgroup" colspan="3"></th>
+                <th id="h-loan" scope="colgroup" colspan="2"></th>
+                <th id="h-term" scope="col" rowspan="2"></th>
+                <th id="h-note" scope="col" rowspan="2"></th>
+            </tr>
+            <tr valign="middle" style="background-color:#f2e9d8;" title="Нижній рядок заголовка" lang="uk">
+                <th id="h-title" scope="col"></th>
+                <th id="h-year" scope="col"></th>
+                <th id="h-code" scope="col"></th>
+                <th id="h-date" scope="col"></th>
+                <th id="h-reader" scope="col"></th>
+            </tr>
+        </thead>
+
+        <tbody title="Основні записи" align="left" char=".">
+            <!-- Запис 1 -->
+            <tr valign="top" style="background-color:#ffffff;" title="Запис 1, рядок 1" lang="uk">
+                <th id="r1" scope="rowgroup" rowspan="2"></th>
+                <td headers="r1 h-edition h-title" lang="uk" width="180"></td>
+                <td headers="r1 h-edition h-year" lang="uk" width="60"></td>
+                <td headers="r1 h-edition h-code" lang="uk" width="70"></td>
+                <td headers="r1 h-loan h-date" lang="uk"></td>
+                <td headers="r1 h-loan h-reader" lang="uk"></td>
+                <td headers="r1 h-term" lang="uk"></td>
+                <td headers="r1 h-note" lang="uk" rowspan="2"></td>
+            </tr>
+            <tr valign="top" style="background-color:#ffffff;" title="Запис 1, рядок 2" lang="uk">
+                <td headers="r1 h-edition h-title" lang="uk"></td>
+                <td headers="r1 h-edition h-year" lang="uk"></td>
+                <td headers="r1 h-edition h-code" lang="uk"></td>
+                <td headers="r1 h-loan h-date" lang="uk"></td>
+                <td headers="r1 h-loan h-reader" lang="uk"></td>
+                <td headers="r1 h-term" lang="uk"></td>
+            </tr>
+
+            <!-- Запис 2 -->
+            <tr valign="top" style="background-color:#faf6ee;" title="Запис 2, рядок 1" lang="uk">
+                <th id="r2" scope="rowgroup" rowspan="2"></th>
+                <td headers="r2 h-edition h-title" lang="uk"></td>
+                <td headers="r2 h-edition h-year" lang="uk"></td>
+                <td headers="r2 h-edition h-code" lang="uk"></td>
+                <td headers="r2 h-loan h-date" lang="uk"></td>
+                <td headers="r2 h-loan h-reader" lang="uk"></td>
+                <td headers="r2 h-term" lang="uk"></td>
+                <td headers="r2 h-note" lang="uk" rowspan="2"></td>
+            </tr>
+            <tr valign="top" style="background-color:#faf6ee;" title="Запис 2, рядок 2" lang="uk">
+                <td headers="r2 h-edition h-title" lang="uk"></td>
+                <td headers="r2 h-edition h-year" lang="uk"></td>
+                <td headers="r2 h-edition h-code" lang="uk"></td>
+                <td headers="r2 h-loan h-date" lang="uk"></td>
+                <td headers="r2 h-loan h-reader" lang="uk"></td>
+                <td headers="r2 h-term" lang="uk"></td>
+            </tr>
+
+            <!-- Запис 3 -->
+            <tr valign="top" style="background-color:#ffffff;" title="Запис 3, рядок 1" lang="uk">
+                <th id="r3" scope="rowgroup" rowspan="2"></th>
+                <td headers="r3 h-edition h-title" lang="uk"></td>
+                <td headers="r3 h-edition h-year" lang="uk"></td>
+                <td headers="r3 h-edition h-code" lang="uk"></td>
+                <td headers="r3 h-loan h-date" lang="uk"></td>
+                <td headers="r3 h-loan h-reader" lang="uk"></td>
+                <td headers="r3 h-term" lang="uk"></td>
+                <td headers="r3 h-note" lang="uk" rowspan="2"></td>
+            </tr>
+            <tr valign="top" style="background-color:#ffffff;" title="Запис 3, рядок 2" lang="uk">
+                <td headers="r3 h-edition h-title" lang="uk"></td>
+                <td headers="r3 h-edition h-year" lang="uk"></td>
+                <td headers="r3 h-edition h-code" lang="uk"></td>
+                <td headers="r3 h-loan h-date" lang="uk"></td>
+                <td headers="r3 h-loan h-reader" lang="uk"></td>
+                <td headers="r3 h-term" lang="uk"></td>
+            </tr>
+
+            <!-- Запис 4 -->
+            <tr valign="top" style="background-color:#faf6ee;" title="Запис 4, рядок 1" lang="uk">
+                <th id="r4" scope="rowgroup" rowspan="2"></th>
+                <td headers="r4 h-edition h-title" lang="uk"></td>
+                <td headers="r4 h-edition h-year" lang="uk"></td>
+                <td headers="r4 h-edition h-code" lang="uk"></td>
+                <td headers="r4 h-loan h-date" lang="uk"></td>
+                <td headers="r4 h-loan h-reader" lang="uk"></td>
+                <td headers="r4 h-term" lang="uk"></td>
+                <td headers="r4 h-note" lang="uk" rowspan="2"></td>
+            </tr>
+            <tr valign="top" style="background-color:#faf6ee;" title="Запис 4, рядок 2" lang="uk">
+                <td headers="r4 h-edition h-title" lang="uk"></td>
+                <td headers="r4 h-edition h-year" lang="uk"></td>
+                <td headers="r4 h-edition h-code" lang="uk"></td>
+                <td headers="r4 h-loan h-date" lang="uk"></td>
+                <td headers="r4 h-loan h-reader" lang="uk"></td>
+                <td headers="r4 h-term" lang="uk"></td>
+            </tr>
+        </tbody>
+
+        <tbody id="extra" title="Додатковий запис та підсумок" lang="uk">
+            <tr valign="top" style="background-color:#ffffff;" title="Запис 5" lang="uk">
+                <th id="r5" scope="row"></th>
+                <td headers="r5 h-edition h-title" lang="uk" bgcolor="#fffbe6"></td>
+                <td headers="r5 h-edition h-year" lang="uk" bgcolor="#fffbe6"></td>
+                <td headers="r5 h-edition h-code" lang="uk" bgcolor="#fffbe6"></td>
+                <td headers="r5 h-loan h-date" lang="uk" bgcolor="#fffbe6"></td>
+                <td headers="r5 h-loan h-reader" lang="uk" bgcolor="#fffbe6"></td>
+                <td headers="r5 h-term" lang="uk" bgcolor="#fffbe6"></td>
+                <td headers="r5 h-note" lang="uk" bgcolor="#fffbe6"></td>
+            </tr>
+            <tr valign="middle" style="background-color:#e8dcc8; font-weight:bold;" title="Підсумок" lang="uk">
+                <td headers="h-num h-title" lang="uk" colspan="2"></td>
+                <td headers="h-year" lang="uk"></td>
+                <td headers="h-code" lang="uk"></td>
+                <td headers="h-loan h-term h-note" lang="uk" colspan="3"></td>
+                <td headers="h-note" lang="uk"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

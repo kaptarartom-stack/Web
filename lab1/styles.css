@@ -241,3 +241,24 @@ p::first-line {
 article h2::before {
     content: "0v0 ";
 }
+
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+caption {
+    caption-side: top;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+th {
+    text-align: center;
+}
+
