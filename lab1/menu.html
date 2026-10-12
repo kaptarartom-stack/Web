@@ -4,33 +4,29 @@
     <meta charset="utf-8">
     <meta name="author" content="Каптар Артьом Євгенійович">
     <title>Навігація та меню — Бібліотека «Мудра Сова»</title>
-    <!-- Тег <link> з потрібними атрибутами -->
     <link rel="stylesheet" type="text/css" sizes="any" rel="stylesheet" media="all" href="styles.css">
 </head>
 <body>
     <header>
-        <!-- Тег <marquee> з атрибутами -->
         <marquee title="Ласкаво просимо" height="30" scrolldelay="100" hspace="10" class="welcome-marquee">
             Вітаємо на офіційному вебпорталі Центральної Бібліотеки «Мудра Сова»!
         </marquee>
     </header>
 
-    <!-- Тег <main> з id -->
     <main id="main-menu-content">
         <h1>Головне меню сайту</h1>
 
-        <!-- Внутрішній якір для переходу на цій же сторінці -->
+   
         <p id="top-anchor">
             <nobr id="nobr-header">Ви перебуваєте у головному розділі навігації.</nobr> 
             <a href="#quick-info" title="Перейти до швидкої інформації" type="text/html">Читати далі про меню ↓</a>
         </p>
 
-        <!-- Тег <nav> з класом -->
+
         <nav class="navigation-menu">
             <h2>Розділи сайту:</h2>
             <ul>
                 <li>
-                    <!-- Тег <a> з усіма вимаганими атрибутами -->
                     <a href="author.html" title="Інформація про автора" rel="author" type="text/html" shape="rect" tabindex="1">
                         1. Автор проекту (author.html)
                     </a>
@@ -51,7 +47,7 @@
                     </a>
                 </li>
                 <li>
-                    <!-- Внутрішнє гіперпосилання на поточну сторінку -->
+                
                     <a href="#bottom-section" title="Перейти до підвалу" rel="bookmark" type="text/html" shape="rect" tabindex="5">
                         5. Перейти до підвалу цієї сторінки (Внутрішнє посилання)
                     </a>
@@ -62,12 +58,10 @@
 
         <section id="quick-info" style="margin-top: 40px; padding: 15px; border: 1px solid #ccc;">
             <h3>Швидкі команди та управління</h3>
-            <!-- Тег <command> з атрибутами -->
-            <command style="color: gray;" disabled="disabled" label="Друк сторінки"></command>
+            <command style="color: gray;" disabled="disabled" label="Друк сторінки">???</command>
             <p>Скористайтеся навігаційним меню вище для швидкого доступу до матеріалів.</p>
         </section>
 
-        <!-- Розділ для внутрішнього переходу -->
         <footer id="bottom-section" style="margin-top: 100px; padding-top: 20px; border-top: 2px dashed #000;">
             <p>&copy; 2026 Центральна Бібліотека «Мудра Сова».</p>
             <p><a href="#top-anchor" title="Повернутися нагору">↑ Повернутися на початок сторінки</a></p>
