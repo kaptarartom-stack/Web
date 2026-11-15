@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Форма запису книги</title>
+<style>
+.f{max-width:480px;margin:auto;font-family:sans-serif}
+.f label,.f input,.f select,.f textarea{display:block;width:100%;box-sizing:border-box;margin:4px 0}
+.f input[type=submit],.f input[type=button],.f button{display:inline-block;width:auto}
+
+/* Шрифти */
+body{font-family:Tahoma}
+.f{font-family:'Lucida Sans Unicode',sans-serif;font-size:14px}
+.t{font-family:cursive;font-size-adjust:0.5}
+.b{font-family:'Arial Narrow Bold',sans-serif;font-weight:900;font-stretch:semi-condensed}
+.o{font-family:Tahoma;font-weight:700}
+.g{font-variant:small-caps;font-style:normal}
+summary{font:caption}
+label{font-stretch:extra-expanded}
+details{font-stretch:expanded}
+
+/* Текст */
+label{text-transform:capitalize;word-spacing:4px}
+.o{text-align:right}
+details{text-indent:5%;white-space:pre}
+
+/* Пристрої */
+@page{size:portrait;marks:cross}
+.f{page:auto}
+@media print{
+details{page-break-before:always}
+p,details{orphans:3;widows:3}
+}
+
+/* Звук */
+.s1{volume:x-soft;cue:url(a.wav) url(b.wav);cue-after:url(b.wav);azimuth:right;elevation:below;speech-rate:slower;voice-family:male;pitch:x-low;pitch-range:50;speak:spell-out;speak-numeral:digits}
+.s2{volume:loud;cue-before:url(a.wav);pause-before:1s;azimuth:behind;speech-rate:slow}
+</style>
+</head>
+<body>
+<form id="f" class="f s1" action="#" method="post" lang="uk" style="padding:10px" novalidate>
+
+<label id="l1" style="font-weight:bold" dir="ltr">Назва книги
+<input class="t" type="text" name="bookName" minlength="2" maxlength="80" lang="uk" height="20" dirname="bookName.dir" placeholder="Кобзар"></label>
+
+<label id="l2" style="font-weight:bold" dir="ltr">Email бібліотеки
+<input class="t" type="email" name="email" maxlength="50"></label>
+
+<label id="l3" style="font-weight:bold" dir="ltr">Телефон
+<input class="t" type="tel" name="tel" maxlength="20"></label>
+
+<label id="l4" style="font-weight:bold" dir="ltr">Кількість примірників
+<input class="t" type="number" name="copies" step="1" max="1000"></label>
+
+<label id="l5" style="font-weight:bold" dir="ltr">Оцінка стану
+<input class="t" type="range" name="rating" step="1" max="10"></label>
+
+<label id="l6" style="font-weight:bold" dir="ltr">Колір палітурки
+<input class="t" type="color" name="cover"></label>
+
+<label id="l7" style="font-weight:bold" dir="ltr">Дата видання
+<input class="t" type="date" name="pubDate" max="2026-11-16"></label>
+
+
+<label id="l8" style="font-weight:bold" dir="ltr">Жанр
+<select name="genre">
+<option value="" selected disabled lang="uk">Виберіть жанр</option>
+<optgroup label="Художня" class="g" lang="uk" style="font-style:normal">
+<option value="novel" lang="uk">Роман</option>
+<option value="poetry" lang="uk">Поезія</option>
+</optgroup>
+<optgroup label="Науково-освітня" class="g" lang="uk" style="font-style:normal">
+<option value="textbook" lang="uk">Підручник</option>
+<option value="science" lang="uk">Наукова праця</option>
+</optgroup>
+</select></label>
+
+<label id="l10" style="font-weight:bold" dir="ltr">Анотація
+<textarea name="about" form="f" dir="ltr" rows="3" cols="40" maxlength="500" required></textarea></label>
+
+<keygen name="key" challenge="lib" keytype="rsa" dir="ltr" autofocus style="display:none">
+
+<details title="Правила" open lang="uk">
+<summary>Умови заповнення</summary>
+Усі поля мають бути заповнені коректно.
+</details>
+
+<meter id="m" class="m" style="width:100%" min="0" optimum="1" value="0.5"></meter>
+
+<input type="submit" class="b" value="Відправити інформацію" formaction="#" formenctype="multipart/form-data" formtarget="_self">
+<button class="b" disabled autofocus formaction="#" formenctype="multipart/form-data">...</button>
+
+<output name="result" class="o s2" style="font-weight:bold" title="Результат"></output>
+</form>
+
+<script>
+const f = document.getElementById("f");
+f.onsubmit = ev => {
+  ev.preventDefault();
+  const e = f.elements;
+  const ok = e.bookName.value.trim() && e.email.value && e.copies.value && e.genre.value && f.checkValidity();
+  e.result.value = ok ? "Інформацію прийнято" : "Перевірте правильність заповнення полів";
+  if (!ok) f.reportValidity();
+};
+</script>
+</body>
+</html>
