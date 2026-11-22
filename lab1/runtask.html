@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Run Task</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        iframe {
+            width: 45%;
+            height: 150px;
+            border: 1px solid black;
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Виконання JavaScript сценарію</h2>
+
+    <button onclick="runTask()">Run Task</button>
+
+    <h3>Перший фрейм</h3>
+    <iframe id="frame1"></iframe>
+
+    <h3>Другий фрейм</h3>
+    <iframe id="frame2"></iframe>
+
+    <h3>Результат виконання</h3>
+    <textarea id="result" readonly></textarea>
+
+    <script>
+        function runTask() {
+            document.getElementById("frame1").srcdoc =
+                "<h2>Перший фрейм</h2><p>Вміст змінено JavaScript.</p>";
+
+            document.getElementById("frame2").srcdoc =
+                "<h2>Другий фрейм</h2><p>Завдання успішно виконано!</p>";
+
+            document.getElementById("result").value =
+                "Вміст двох фреймів було змінено.\n" +
+                "Час виконання: " + new Date().toLocaleTimeString();
+
+            console.log("Вміст фреймів змінено");
+        }
+    </script>
+
+</body>
+</html>

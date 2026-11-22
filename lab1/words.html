@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Пошук регулярними виразами</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        textarea {
+            width: 90%;
+            height: 150px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Пошук інформації в тексті</h2>
+
+    <form>
+        <label for="inputText">Введіть текст:</label>
+        <br>
+        <textarea id="inputText"></textarea>
+        <br>
+
+        <button type="button" onclick="searchText()">
+            Пошук інформації
+        </button>
+    </form>
+
+    <h3>Результат пошуку:</h3>
+    <textarea id="output" readonly></textarea>
+
+    <script>
+        function searchText() {
+            let text = document.getElementById("inputText").value;
+
+            // Пошук слів, які починаються і закінчуються буквами
+            let words = text.match(/(?<![\p{L}])[\p{L}]+(?![\p{L}])/gu);
+
+            // Пошук цілих чисел
+            let numbers = text.match(/(?<![\p{L}\p{N}])\d+(?![\p{L}\p{N}])/gu);
+
+            let result = "Слова:\n";
+
+            if (words != null) {
+                result += words.join(", ");
+            } else {
+                result += "Не знайдено";
+            }
+
+            result += "\n\nЦілі числа:\n";
+
+            if (numbers != null) {
+                result += numbers.join(", ");
+            } else {
+                result += "Не знайдено";
+            }
+
+            document.getElementById("output").value = result;
+        }
+    </script>
+
+</body>
+</html>
